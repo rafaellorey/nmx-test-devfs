@@ -1,4 +1,13 @@
 $(function () {
+    //image colorbox
+    if ($('.cbox_single').length) {
+        $('.cbox_single').colorbox({
+            maxWidth: '80%',
+            maxHeight: '80%',
+            opacity: '0.2',
+            fixed: true
+        });
+    }     
     //SETUP VALIDACIÓN
     jQuery.validator.setDefaults({
         rules: {

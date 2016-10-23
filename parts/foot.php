@@ -4,6 +4,8 @@
     <script src="shared/js/sweetalert.min.js"></script>
     <script src="shared/js/jquery.uploadfile.min.js"></script>
     <script src="shared/js/validate.min.js"></script>
+    <script src="shared/lib/colorbox/jquery.colorbox-min.js"></script>
+    <script src="shared/lib/toastr/toastr.js"></script>
     <script src="shared/js/main.js"></script>
     <?php
     //AUTO CARGA DE JS

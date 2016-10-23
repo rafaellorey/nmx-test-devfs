@@ -36,4 +36,17 @@ class cMedia extends base {
             }                
         }          
     }    
+    public function upStatus($id,$stat){
+        if(is_numeric($id) && $stat >=0 && $stat <= 1){
+            $dbm = new medoo();
+            if($dbm->has($this->tabla, array('id' => $id))){ 
+                $rowsAfec = $dbm->update($this->tabla, array("estatus"=>$stat), array("id"=>$id));                
+                return ($rowsAfec > 0);                
+            }else{
+                $this->error = "Datos incorrectos, verifique.";
+            }    
+        }else{
+            $this->error = "Faltan datos requeridos.";
+        }
+    }
 }

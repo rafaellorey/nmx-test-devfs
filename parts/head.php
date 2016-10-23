@@ -13,6 +13,8 @@ require_once('ini.php');
         <title>NMX Evaluación, Desarrollador FS</title>
         <link href="shared/css/bootstrap.min.css" rel="stylesheet">
         <link href="shared/css/sweetalert.css" rel="stylesheet">
+        <link href="shared/lib/colorbox/colorbox.css" rel="stylesheet">
+        <link href="shared/lib/toastr/toastr.css" rel="stylesheet">
         <?php
         //AUTO CARGA DE CSS
         $cP = pageName($_SERVER['PHP_SELF']);

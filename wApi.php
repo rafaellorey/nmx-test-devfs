@@ -59,7 +59,23 @@ if(Input::postHasVal('oper')){
             $pass = Input::post('pass');
             $success = $oUser->changePass($token, $pass);
             $error = $oUser->error;
-            break;        
+            break; 
+        case  'mediaestatus':
+            if(Session::has('CMS_id')){
+                $id = Input::request("pk");
+                $valor = Input::request("value");            
+                if(is_numeric($valor) && is_numeric($id))
+                {    
+                    $oMedia = new cMedia();
+                    $success = $oMedia->upStatus($id, $valor);
+                    $error = $oMedia->error;
+                }else{
+                    $error = "Faltan Datos.";
+                }                   
+            }else{
+                $error = "Necesita iniciar sesión.";
+            }
+            break;
         default:
                 $error = "Operación no válida.";
             break;
