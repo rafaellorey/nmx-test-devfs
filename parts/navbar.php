@@ -21,7 +21,7 @@ $cP = pageName($_SERVER['PHP_SELF']);
                     <a href="index.php">
                         <i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;Galer&iacute;a
                     </a>
-                </li>
+                </li>                
                 <li <?php echo($cP == "sube-imagen" ? 'class="active"' : ''); ?>>
                     <a href="sube-imagen.php">
                         <i class="glyphicon glyphicon-upload"></i>&nbsp;&nbsp;Subir Gif
@@ -29,11 +29,24 @@ $cP = pageName($_SERVER['PHP_SELF']);
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <?php if(Session::has('CMS_id')): ?>
+                <li <?php echo($cP == "admin" ? 'class="active"' : ''); ?>>
+                    <a href="admin.php">
+                        <i class="glyphicon glyphicon-check"></i>&nbsp;&nbsp;Aprobar GIFs
+                    </a>
+                </li>  
+                <li>
+                    <a href="javascript:void(0);" class="logOff">
+                        <i class="glyphicon glyphicon-off"></i>&nbsp;&nbsp;Salir
+                    </a>
+                </li>
+                <?php else:?>
                 <li <?php echo($cP == "registro-login" ? 'class="active"' : ''); ?>>
                     <a href="registro-login.php">
                         <i class="glyphicon glyphicon-lock"></i>&nbsp;&nbsp;Registro / Login
                     </a>
                 </li>
+                <?php endif;?>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

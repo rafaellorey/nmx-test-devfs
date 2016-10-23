@@ -30,14 +30,14 @@ $(function () {
             if (data.success) {
                 swal({
                     title:"GIF RECIBIDO", 
-                    text:'El GIF animado ['+data.img+'] fue recibido, gracias.', 
+                    text:'El GIF animado fue recibido, gracias.', 
                     type:"success"},
                     function(){
                         window.location = 'index.php';
                     });                
                 
             } else {
-                swal("ERROR: GIF NO RECIBIDO", "Ocurrio un problema ["+data.error+"].", "error");
+                swal("ERROR: "+data.error, "Corrija el error e intente nuevamente.", "error");
             }
         },
         onError: function (files, status, message) {

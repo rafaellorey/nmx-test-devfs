@@ -6,7 +6,7 @@ class cMail {
     
     function __construct(){    
         //config files
-        $databases = Config::read('databases');
+        $databases = Config::read('mailing');
         $config = $databases[ENV];          
         
         $this->email = new PHPMailer;
