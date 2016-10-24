@@ -17,9 +17,14 @@ body {
 
 .thumbnail {
     padding: 0;
-    padding-bottom: 5px;
 }
 .thumbnail hr{
     margin-top: 0px;
     margin-bottom: 5px;
+}
+
+
+#btns-vistas label{
+    font-size: 18px;
+    margin-right: 10px;
 }

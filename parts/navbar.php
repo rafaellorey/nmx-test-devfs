@@ -11,7 +11,7 @@ $cP = pageName($_SERVER['PHP_SELF']);
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>            
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 <img alt="Nurum" src="shared/images/favicon.png">&nbsp;GIFs
             </a>
         </div>
